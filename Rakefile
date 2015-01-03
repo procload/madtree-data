@@ -4,6 +4,7 @@ require 'open-uri'
 require 'fog'
 require 'untappd'
 require 'json'
+require "sinatra/json"
 
 desc "This task is called by the Heroku scheduler add-on"
 task :update_untappd do

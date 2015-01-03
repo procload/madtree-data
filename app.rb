@@ -89,8 +89,9 @@ get '/' do
   erb :index
 end
 
-get '/test' do
-  "hello"
+get '/untappd' do
+  content_type :json
+  File.read(File.join('views', 'untappd.json'))
 end
 
 post '/' do
