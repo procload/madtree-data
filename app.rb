@@ -1,3 +1,6 @@
+require 'sinatra'
+require "sinatra/jsonp"
+
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/dev.sqlite3")
 
 class Spreadsheet
