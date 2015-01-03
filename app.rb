@@ -91,7 +91,7 @@ end
 
 get '/untappd' do
   data = File.read(File.join('views', 'untappd.json'))
-  JSONP data
+  jsonp data
 end
 
 post '/' do
