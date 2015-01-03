@@ -85,6 +85,7 @@ GEM
     nokogiri (1.5.11)
     pg (0.14.1)
     rack (1.5.2)
+    rack-cors (0.3.1)
     rack-protection (1.5.0)
       rack
     ruby-hmac (0.4.0)
@@ -112,6 +113,7 @@ DEPENDENCIES
   fog
   nokogiri (~> 1.5.11)
   pg
+  rack-cors
   sinatra
   sinatra-jsonp
   untappd
