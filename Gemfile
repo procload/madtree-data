@@ -5,6 +5,8 @@ gem 'sinatra'
 gem 'data_mapper'
 gem 'fog'
 
+gem "untappd"
+
 group :production do
   gem 'pg'
   gem 'dm-postgres-adapter'

@@ -89,6 +89,10 @@ get '/' do
   erb :index
 end
 
+get '/test' do
+  "hello"
+end
+
 post '/' do
   spreadsheet = Spreadsheet.from_key(params[:key])
   if spreadsheet.save
