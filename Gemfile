@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'nokogiri', '~> 1.5.11'
 gem 'sinatra'
+gem 'sinatra-jsonp'
 gem 'data_mapper'
 gem 'fog'
 

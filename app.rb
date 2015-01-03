@@ -90,8 +90,8 @@ get '/' do
 end
 
 get '/untappd' do
-  content_type :json
-  File.read(File.join('views', 'untappd.json'))
+  data = File.read(File.join('views', 'untappd.json'))
+  JSONP data
 end
 
 post '/' do

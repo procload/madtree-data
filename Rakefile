@@ -1,4 +1,5 @@
 require 'sinatra'
+require "sinatra/jsonp"
 require 'data_mapper'
 require 'open-uri'
 require 'fog'
