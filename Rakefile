@@ -4,7 +4,6 @@ require 'open-uri'
 require 'fog'
 require 'untappd'
 require 'json'
-require "sinatra/json"
 
 desc "This task is called by the Heroku scheduler add-on"
 task :update_untappd do
@@ -20,7 +19,7 @@ task :update_untappd do
 
   json = JSON.generate brewery.brewery
 
-  File.open("build/untappd.json","w") do |f|
+  File.open("views/untappd.json","w") do |f|
     f.write(json)
   end
   puts "done."
