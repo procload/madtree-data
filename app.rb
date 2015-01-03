@@ -1,5 +1,5 @@
 require 'sinatra'
-require "sinatra/jsonp"
+require 'sinatra/cross_origin'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/dev.sqlite3")
 
@@ -88,14 +88,17 @@ end
 
 DataMapper.finalize.auto_upgrade!
 
+configure do
+  enable :cross_origin
+end
+
 get '/' do
   erb :index
 end
 
 get '/untappd' do
-  # data = File.read(File.join('views', 'untappd.json'))
-  data = ["hello","hi","hallo"]
-  jsonp data
+  content_type :json
+  File.read(File.join('views', 'untappd.json'))
 end
 
 post '/' do
