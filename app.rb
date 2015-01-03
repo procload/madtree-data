@@ -93,7 +93,8 @@ get '/' do
 end
 
 get '/untappd' do
-  data = File.read(File.join('views', 'untappd.json'))
+  # data = File.read(File.join('views', 'untappd.json'))
+  data = ["hello","hi","hallo"]
   jsonp data
 end
 
